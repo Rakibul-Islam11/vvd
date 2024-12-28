@@ -1,22 +1,28 @@
 import { useState } from 'react';
-import vdo from './assets/videos/Acer Aspire 3 Spin 14 2-in-1 Convertible Laptop Review.mp4';
-import imgg from './assets/img/Screenshot 2024-12-28 140944.png'
+import vdo from './assets/videos/coverVideo.mp4';
+import coverImg from './assets/img/Screenshot 2024-12-28 140944.png'; // কভার ইমেজ যুক্ত করুন
 import './App.css';
 
 function App() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [showCover, setShowCover] = useState(true);
 
   const handleVideoLoaded = () => {
     setIsVideoLoaded(true);
+
+    // 2 সেকেন্ড পর্যন্ত কভার ইমেজ দেখান (ঐচ্ছিক)
+    setTimeout(() => {
+      setShowCover(false);
+    }, 0);
   };
 
   return (
     <>
       <div className="video-container" style={{ position: 'relative' }}>
         {/* কভার ইমেজ */}
-        {!isVideoLoaded && (
+        {showCover && (
           <img
-            src={imgg}
+            src={coverImg}
             alt="Cover"
             style={{
               position: 'absolute',
