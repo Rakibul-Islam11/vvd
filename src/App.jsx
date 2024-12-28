@@ -1,28 +1,22 @@
 import { useState } from 'react';
-import vdo from './assets/videos/coverVideo.mp4';
-import coverImg from './assets/img/Screenshot 2024-12-28 140944.png'; // কভার ইমেজ যুক্ত করুন
+import vdo from './assets/videos/sdsd.mp4';
+import imgg from './assets/img/gg.png'
 import './App.css';
 
 function App() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const [showCover, setShowCover] = useState(true);
 
   const handleVideoLoaded = () => {
     setIsVideoLoaded(true);
-
-    // 2 সেকেন্ড পর্যন্ত কভার ইমেজ দেখান (ঐচ্ছিক)
-    setTimeout(() => {
-      setShowCover(false);
-    }, 0);
   };
 
   return (
     <>
       <div className="video-container" style={{ position: 'relative' }}>
         {/* কভার ইমেজ */}
-        {showCover && (
+        {!isVideoLoaded && (
           <img
-            src={coverImg}
+            src={imgg}
             alt="Cover"
             style={{
               position: 'absolute',
@@ -48,6 +42,7 @@ function App() {
             display: isVideoLoaded ? 'block' : 'none',
           }}
         ></video>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque modi, est at odio, vel reprehenderit repellat facilis earum ad deleniti repellendus aliquam labore aspernatur dolores magnam quasi ex minus laborum!</p>
       </div>
     </>
   );
