@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import vdo from './assets/videos/coverVideo.mp4';
+import vdo from './assets/videos/sdsd.mp4';
 import imgg from './assets/img/gg.png'
 import './App.css';
 
