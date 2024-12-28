@@ -42,6 +42,7 @@ function App() {
             display: isVideoLoaded ? 'block' : 'none',
           }}
         ></video>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quia nesciunt ducimus recusandae, atque accusantium. At tempore ea quod porro! Quasi eligendi corrupti asperiores nesciunt nostrum impedit sint, officiis reprehenderit.</p>
       </div>
     </>
   );
